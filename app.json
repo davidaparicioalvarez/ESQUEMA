@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "publisher": "APAWARE - David Aparicio",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "https://businesscentral.dynamics.com",
+  "EULA": "https://businesscentral.dynamics.com",
+  "help": "https://businesscentral.dynamics.com",
+  "url": "https://businesscentral.dynamics.com",
+  "contextSensitiveHelpUrl": "https://businesscentral.dynamics.com",
+  "logo": "..\\res\\logo\\DAA.peq.jpg",
+  "dependencies": [],
+  "screenshots": [],
+  "idRanges": [
+    {
+      "from": ,
+      "to": 
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true,
+    "applyToDevExtension": true
+  },
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile", "GenerateCaptions"
+  ],
+  "supportedLocales": ["en-US", "es-ES", "es-ES_tradnl"],
+  "platform": "1.0.0.0",
+  "application": "XX.0.0.0",
+  "runtime": "XX.0",
+  "target": "Cloud"
+}
