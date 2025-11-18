@@ -10,7 +10,7 @@
   "help": "https://businesscentral.dynamics.com",
   "url": "https://businesscentral.dynamics.com",
   "contextSensitiveHelpUrl": "https://businesscentral.dynamics.com",
-  "logo": "..\\res\\logo\\DAA.peq.jpg",
+  "logo": "res/logo/DAA.peq.png",
   "dependencies": [],
   "screenshots": [],
   "idRanges": [
