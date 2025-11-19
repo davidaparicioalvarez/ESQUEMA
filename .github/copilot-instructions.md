@@ -77,6 +77,7 @@ procedure CalculateDiscountedTotal(var SalesLine: Record \"Sales Line\"; SalesHe
 - Consider data classification for GDPR compliance
 - Use TableRelation property for lookups and validations
 - Always implement fieldgroups with DropDown and Brick fieldgroup with primary key
+- Always add ToolTips to fields and its corresponding translation in Comment.
 
 ```al
 table 50100 "APA Customer Loyalty Points"
@@ -89,12 +90,14 @@ table 50100 "APA Customer Loyalty Points"
         field(50000; "APA Customer No."; Code[20])
         {
             Caption = 'Customer No.', Comment = 'ESP="Nº cliente"';
+            ToolTip = 'Specifies the Customer No.', Comment = 'ESP="Especifica el valor del campo Nº cliente"';
             TableRelation = Customer."No.";
         }
         
         field(50001; "APA Loyalty Points"; Integer)
         {
             Caption = 'Loyalty Points', Comment = 'ESP="Puntos de fidelización"';
+            ToolTip = 'Specifies the Loyality Points for the customer', Comment = 'ESP="Especifica los puntos de fidelización del cliente"';
             MinValue = 0;
         }
     }
@@ -124,6 +127,8 @@ table 50100 "APA Customer Loyalty Points"
 - Implement proper actions and promote important ones
 - Use FieldGroups for DropDown and Brick views
 - Consider mobile optimization with appropriate controls
+- Never include ToolTips in page fields.
+- Alway include ToolTips in page actions.
 
 ```al
 page 50100 "APA Customer Loyalty Points"
@@ -143,13 +148,11 @@ page 50100 "APA Customer Loyalty Points"
                 field("APA Customer No."; Rec."APA Customer No.")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the customer number.', Comment = 'ESP="Especifica el número de cliente."';
                 }
                 
                 field("APA Loyalty Points"; Rec."APA Loyalty Points")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the loyalty points for the customer.', Comment = 'ESP="Especifica los puntos de fidelización del cliente."';
                 }
             }
         }
@@ -162,6 +165,7 @@ page 50100 "APA Customer Loyalty Points"
             action(UpdatePoints)
             {
                 Caption = 'Update Points', Comment = 'ESP="Actualizar puntos";
+                ToolTip = 'Update the Loyality Points in customer', Comment = 'ESP="Actualiza los puntos de fidelización del cliente"';
                 ApplicationArea = All;
                 
                 trigger OnAction()
