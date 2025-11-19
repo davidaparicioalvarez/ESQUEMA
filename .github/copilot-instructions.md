@@ -136,6 +136,8 @@ page 50100 "APA Customer Loyalty Points"
     Caption = 'Customer Loyalty Points Card', Comment = 'ESP="Ficha de puntos de fidelización del cliente"';
     PageType = Card;
     SourceTable = "APA Customer Loyalty Points";
+    ApplicationArea = All;
+    UsageCategory = Lists;
     
     layout
     {
@@ -147,12 +149,10 @@ page 50100 "APA Customer Loyalty Points"
                 
                 field("APA Customer No."; Rec."APA Customer No.")
                 {
-                    ApplicationArea = All;
                 }
                 
                 field("APA Loyalty Points"; Rec."APA Loyalty Points")
                 {
-                    ApplicationArea = All;
                 }
             }
         }
@@ -166,7 +166,6 @@ page 50100 "APA Customer Loyalty Points"
             {
                 Caption = 'Update Points', Comment = 'ESP="Actualizar puntos";
                 ToolTip = 'Update the Loyality Points in customer', Comment = 'ESP="Actualiza los puntos de fidelización del cliente"';
-                ApplicationArea = All;
                 
                 trigger OnAction()
                 begin
@@ -184,7 +183,7 @@ page 50100 "APA Customer Loyalty Points"
 - Use events for extensibility
 - Consider performance implications
 - The 'if' keyword should always start a line.
-- Add 'this' qualification to improve readability as needed by CodeCop rule AA0249
+- Add 'this' qualification to improve readability as needed by CodeCop rules AA0248 and AA0249
 
 ```al
 codeunit 50100 "ABC Loyalty Management"
