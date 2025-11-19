@@ -184,7 +184,7 @@ page 50100 "APA Customer Loyalty Points"
 - Use events for extensibility
 - Consider performance implications
 - The 'if' keyword should always start a line.
-- Add 'this' qualification to improve readability.
+- Add 'this' qualification to improve readability as needed by CodeCop rule AA0249
 
 ```al
 codeunit 50100 "ABC Loyalty Management"
