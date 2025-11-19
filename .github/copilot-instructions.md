@@ -183,6 +183,8 @@ page 50100 "APA Customer Loyalty Points"
 - Implement proper error handling
 - Use events for extensibility
 - Consider performance implications
+- The 'if' keyword should always start a line.
+- Add 'this' qualification to improve readability.
 
 ```al
 codeunit 50100 "ABC Loyalty Management"
